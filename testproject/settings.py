@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages', # displaying one time messages
     'django.contrib.staticfiles', # for images, css, js
     'playground', # our app
+    'debug_toolbar', # for debugging
     # 'playground.apps.PlaygroundConfig', # our app
 ]
 
@@ -49,6 +50,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # for debugging
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
+
+INTERNAL_IPS = [
+    '127.0.0.1'
 ]
 
 ROOT_URLCONF = 'testproject.urls'
